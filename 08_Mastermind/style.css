@@ -58,6 +58,36 @@ p{
     flex-direction: row;
 }
 
+#grid-check_left{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, calc(10vw/4));
+    grid-template-rows: repeat(6, calc(50vh/6));
+}
+
+#grid-check_left>img{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+
+#grid-check_right{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, calc(10vw/4));
+    grid-template-rows: repeat(6, calc(50vh/6));
+}
+
+#grid-check_right>img{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+
 #grid-guesses_left{
     padding: 40px;
     display: grid;
