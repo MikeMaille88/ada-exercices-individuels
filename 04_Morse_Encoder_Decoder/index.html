@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My web page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <h1>Morse encoder/decoder</h1>
+        <p id ="sentenceInput-instruction">Entrer une phrase à coder en morse</p>
+        <input type = "text" id = "sentenceInput-input"/>
+        <input type ="button" id = "sentenceInput-button" onclick="encode();"/>
+        <p id = "morseTranslation"></p>
+
+        <p id ="morseInput-instruction">Entrer une phrase en morse à décoder</p>
+        <input type = "text" id = "morseInput-input"/>
+        <input type ="button" id = "morseInput-button" onclick="decode();"/>
+        <p id = "latinTranslation"></p>
+
+
+
+
+        <script src="morse.js"></script>
+    </body>
+</html>

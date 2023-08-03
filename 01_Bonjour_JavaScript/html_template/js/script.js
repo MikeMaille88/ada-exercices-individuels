@@ -2,7 +2,6 @@
 var nom = ""
 function askName() {
     nom = prompt("Comment t'appelles-tu ?");
-    //return nom
 }
 
 //Demande année de naissance
@@ -19,8 +18,7 @@ function askBirthYear() {
   var moisActuel = dateActuelle.getMonth() + 1; 
   if (moisActuel < mois) {
     age--;
-  }
-    //return age
+  }  
 }
 
 //Affichage
