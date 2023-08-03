@@ -88,7 +88,13 @@ p{
     height: 30px;
 }
 
+#grid-guesses_left-parent {
+    display: flex;
+    justify-content: center;
+}
+
 #grid-guesses_left{
+    position: relative;
     padding: 40px;
     display: grid;
     grid-template-columns: repeat(4, calc(30vw/4));
@@ -105,7 +111,13 @@ p{
     height: 60px;
 }
 
+#grid-guesses_right-parent {
+    display: flex;
+    justify-content: center;
+}
+
 #grid-guesses_right{
+    position: relative;
     padding: 40px;
     display: grid;
     grid-template-columns: repeat(4, calc(30vw/4));

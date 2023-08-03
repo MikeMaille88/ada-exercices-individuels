@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moriastermind</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
 </head>
 <body class="Home">
+
+    <div style="position: relative;">
+        <div id="colorList" style="display: none; position: absolute; z-index: 1;">
+        <form name="Choix">
+            <select name="Liste">
+                <option value="Blanc">Choisir une couleur</option>
+                <option value="Bleu">Bleu</option>
+                <option value="Jaune">Jaune</option>
+                <option value="Rouge">Rouge</option>
+                <option value="Vert">Vert</option>
+                <option value="Violet">Violet</option>
+                <option value="Gris">Gris</option>
+                <option value="Turquoise">Turquoise</option>
+                <option value="Noir">Noir</option>
+            </select>
+        </form>
+        </div>
+    </div>
     
     <div class="header">
         <h1>Moriastermind</h1>
@@ -63,58 +80,62 @@
             <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc4_check_left">
         </div>
 
-        <div id="grid-guesses_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc1_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc2_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc3_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc4_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc5_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc6_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc7_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc8_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc9_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc10_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc11_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc12_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc13_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc14_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc15_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc16_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc17_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc18_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc19_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc20_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc21_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc22_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc23_left">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc24_left">
+        <div style="position: relative; display: flex; justify-content: center;" id="grid-guesses_left-parent">
+            <div id="grid-guesses_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc1_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc2_left">  
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc3_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc4_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc5_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc6_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc7_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc8_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc9_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc10_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc11_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc12_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc13_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc14_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc15_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc16_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc17_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc18_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc19_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc20_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc21_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc22_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc23_left">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc24_left">
+            </div>
         </div>
 
-        <div id="grid-guesses_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc1_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc2_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc3_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc4_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc5_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc6_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc7_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc8_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc9_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc10_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc11_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc12_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc13_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc14_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc15_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc16_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc17_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc18_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc19_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc20_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc21_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc22_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc23_right">
-            <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc24_right">
+        <div style="position: relative; display: flex; justify-content: center;" id="grid-guesses_right-parent">
+            <div id="grid-guesses_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc1_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc2_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc3_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc4_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc5_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc6_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc7_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc8_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc9_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc10_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc11_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc12_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc13_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc14_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc15_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc16_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc17_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc18_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc19_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc20_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc21_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc22_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc23_right">
+                <img src="./Images/Blanc.png"    alt="Bille blanche" id="blanc24_right">
+            </div>
         </div>
 
         <div id="grid-check_right">
@@ -146,37 +167,6 @@
 
     </section>
 
-        <!-- <div id="Bleu">
-            <img src="./Images/Bleu.png"    alt="Bille bleue">
-        </div>
-        
-        <div id="Gris">
-            <img src="./Images/Gris.png"    alt="Bille grise">
-        </div>
-
-        <div id="Jaune">
-            <img src="./Images/Jaune.png"    alt="Bille jaune">
-        </div>
-
-        <div id="Noir">
-            <img src="./Images/Noir.png"    alt="Bille noire">
-        </div>
-
-        <div id="Rouge">
-            <img src="./Images/Rouge.png"    alt="Bille rouge">
-        </div>
-
-        <div id="Turquoise">
-            <img src="./Images/Turquoise.png"    alt="Bille turquoise">
-        </div>
-
-        <div id="Vert">
-            <img src="./Images/Vert.png"    alt="Bille verte">
-        </div>
-
-        <div id="Violet">
-            <img src="./Images/Violet.png"    alt="Bille violette">
-        </div> -->
-    
+    <script src="./script.js"></script>
 </body>
 </html>
