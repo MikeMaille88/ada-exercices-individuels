@@ -27,13 +27,15 @@ h2{
 }
 
 p{
-    margin-top: 50px;
+    margin: 50px auto 20px auto;
+    width: 150px;
+    background-color: rgb(57 57 57 / 0.75);
     color : white;
     text-align: center;
     font-size: larger;
 }
 
-.grid-code{
+#grid-code{
     margin-top: 20px;
     margin-left: 40%;
     display: grid;
@@ -41,7 +43,7 @@ p{
     grid-template-rows: repeat(1, calc(5vh));
 }
 
-.grid-code >div >img{
+#grid-code >img{
     display: flex;
     position: relative;
     margin: auto;

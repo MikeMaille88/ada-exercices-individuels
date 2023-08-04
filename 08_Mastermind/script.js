@@ -1,7 +1,7 @@
 let activeBall = null; // Variable pour stocker la bille active
 const colors = ["Bleu", "Jaune", "Rouge", "Vert", "Violet", "Turquoise", "Noir", "Gris"]
-//let code = []
-let code = [ "Bleu", "Jaune", "Rouge", "Vert" ]
+let code = []
+//let code = ["Turquoise", "Jaune", "Rouge", "Violet"]
 
 //Choix aléatoire du code parmi les 8 couleurs disponibles
 function randomCode() {
@@ -10,10 +10,20 @@ function randomCode() {
         code.push(color);
         console.log(code)
     }
+    //Afficher les couleurs du code sur la page
+    let gridCode = document.getElementById("grid-code");
+    console.log(gridCode)
+        for (i=0; i<4; i++){
+            let colorToCast = code[i];
+            console.log("colorToCast", colorToCast);
+            gridCode.children[i].src = `./Images/${colorToCast}.png`;
+            console.log("newColorImg",gridCode.children[i].src);
+        }
 }
 
-//randomCode()
+randomCode()
 console.log("code", code)
+
 
 
 // Fonction pour afficher ou masquer la liste des couleurs
