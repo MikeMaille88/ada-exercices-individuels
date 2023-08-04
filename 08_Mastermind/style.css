@@ -65,6 +65,11 @@ p{
     height: 45px;
 }
 
+.button{
+    margin-top: 20px;
+    text-align: center;
+}
+
 .grid-guesses{
     margin-top: 60px;
     justify-content: center;
