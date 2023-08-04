@@ -1,6 +1,7 @@
 let activeBall = null; // Variable pour stocker la bille active
-const colors = ["bleu", "jaune", "rouge", "vert", "violet", "turquoise", "noir", "gris"]
-let code = []
+const colors = ["Bleu", "Jaune", "Rouge", "Vert", "Violet", "Turquoise", "Noir", "Gris"]
+//let code = []
+let code = [ "Bleu", "Jaune", "Rouge", "Vert" ]
 
 //Choix aléatoire du code parmi les 8 couleurs disponibles
 function randomCode() {
@@ -11,7 +12,8 @@ function randomCode() {
     }
 }
 
-randomCode()
+//randomCode()
+console.log("code", code)
 
 
 // Fonction pour afficher ou masquer la liste des couleurs
@@ -72,10 +74,18 @@ validation.addEventListener("click", () => {
         let color = colorImg.split("/").pop().split(".").shift();
         codeProposition.push(color);
         container.children[i].src = "./Images/Blanc.png";
-        }
-    console.log(codeProposition);
+    }
+    console.log("codeProposition", codeProposition);
+
+    //Je compare le tableau avec celui du code
+    if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
+        alert("C'est gagné")
+    }
+    else{
+        alert("C'est perdu")
+    }
+
     })
 
-//Je compare le tableau avec celui du code
 
 //Je change les src des grid-guesses
