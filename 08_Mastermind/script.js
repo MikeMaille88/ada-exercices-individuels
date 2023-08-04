@@ -45,3 +45,24 @@ let activeBall = null; // Variable pour stocker la bille active
     // Ajoutez un gestionnaire d'événement de changement pour la liste de sélection
     const colorList = document.querySelector("[name=Liste]");
     colorList.addEventListener("change", showSelectedColor);
+
+
+// Quand je clique sur Valider, je récupère les couleurs depuis les src du grid-propose
+// pour les mettre dans un tableau
+const validation = document.getElementById("button");
+validation.addEventListener("click", () => {
+    let container = document.getElementById("grid-propose");
+    console.log(container);
+    let codeProposition = []
+    for (i=0; i<4; i++){
+        let colorImg = container.children[i].src;
+        console.log(colorImg);
+        let color = colorImg.split("/").pop().split(".").shift()
+        codeProposition.push(color);
+        }
+    console.log(codeProposition);
+    })
+
+//Je compare le tableau avec celui du code
+
+//Je change les src des grid-guesses

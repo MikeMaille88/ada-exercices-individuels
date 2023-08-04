@@ -49,7 +49,7 @@ p{
     height: 45px;
 }
 
-.grid-propose{
+#grid-propose{
     margin-top: 20px;
     margin-left: 40%;
     display: grid;
@@ -57,7 +57,7 @@ p{
     grid-template-rows: repeat(1, calc(5vh));
 }
 
-.grid-propose >img{
+#grid-propose >img{
     display: flex;
     position: relative;
     margin: auto;
@@ -65,7 +65,7 @@ p{
     height: 45px;
 }
 
-.button{
+#button{
     margin-top: 20px;
     text-align: center;
 }
