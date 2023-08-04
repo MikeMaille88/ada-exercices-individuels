@@ -39,11 +39,25 @@ p{
     display: grid;
     grid-template-columns: repeat(4, calc(20vw/4));
     grid-template-rows: repeat(1, calc(5vh));
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 }
 
 .grid-code >div >img{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 45px;
+    height: 45px;
+}
+
+.grid-propose{
+    margin-top: 20px;
+    margin-left: 40%;
+    display: grid;
+    grid-template-columns: repeat(4, calc(20vw/4));
+    grid-template-rows: repeat(1, calc(5vh));
+}
+
+.grid-propose >img{
     display: flex;
     position: relative;
     margin: auto;
