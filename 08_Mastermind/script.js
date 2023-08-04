@@ -17,7 +17,7 @@ let activeBall = null; // Variable pour stocker la bille active
             const topOffset = ballRect.top - parentRect.top - colorList.offsetHeight - 5;
             const leftOffset = ballRect.left - gridRect.left;
 
-            colorList.style.top = `${topOffset+300}px`;
+            colorList.style.top = `${topOffset+320}px`;
             colorList.style.left = `${leftOffset+30}px`;
         }
     }
