@@ -93,17 +93,28 @@ validation.addEventListener("click", () => {
         alert("C'est gagné")
     }
     else{
-        alert("C'est perdu")
         //Je change les src des grid-guesses
         let c = 0;
-        const gridGuess = document.getElementById("grid-guesses_left");
-        console.log(gridGuess);
-        for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
-            gridGuess.children[j].src = `./Images/${codeProposition[c]}.png`;
-            c++;
+        if (currentGridGuessBall < 24){
+            let gridGuess = document.getElementById("grid-guesses_left");
+            console.log(gridGuess,"left");
+            for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
+                gridGuess.children[j].src = `./Images/${codeProposition[c]}.png`;
+                c++;
+            }
+            currentGridGuessBall += 4
+        }else if (currentGridGuessBall > 44){
+            alert("C'est perdu")
+        }else{
+            gridGuess = document.getElementById("grid-guesses_right");
+            console.log(gridGuess,"right");
+            for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
+                console.log(j-currentGridGuessBall+1)
+                gridGuess.children[j-24].src = `./Images/${codeProposition[c]}.png`;
+                c++;
+            }
+            currentGridGuessBall += 4
         }
-        currentGridGuessBall += 4
-
     }
 
     })
