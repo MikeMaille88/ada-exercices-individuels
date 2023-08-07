@@ -8,21 +8,21 @@ function randomCode() {
     for (i=0; i<4; i++){
         let color = colors[Math.floor(Math.random()*colors.length)];
         code.push(color);
-        console.log(code)
+        //console.log(code)
     }
     //Afficher les couleurs du code sur la page
     let gridCode = document.getElementById("grid-code");
-    console.log(gridCode)
+    //console.log(gridCode)
         for (i=0; i<4; i++){
             let colorToCast = code[i];
-            console.log("colorToCast", colorToCast);
+            //console.log("colorToCast", colorToCast);
             gridCode.children[i].src = `./Images/${colorToCast}.png`;
-            console.log("newColorImg",gridCode.children[i].src);
+            //console.log("newColorImg",gridCode.children[i].src);
         }
 }
 
 randomCode()
-console.log("code", code)
+//console.log("code", code)
 
 
 
@@ -75,6 +75,7 @@ colorList.addEventListener("change", showSelectedColor);
 
 // Quand je clique sur Valider, je récupère les couleurs depuis les src du grid-propose
 // pour les mettre dans un tableau
+let currentGridGuessBall = 1;
 const validation = document.getElementById("button");
 validation.addEventListener("click", () => {
     let container = document.getElementById("grid-propose");
@@ -85,7 +86,7 @@ validation.addEventListener("click", () => {
         codeProposition.push(color);
         container.children[i].src = "./Images/Blanc.png";
     }
-    console.log("codeProposition", codeProposition);
+    //console.log("codeProposition", codeProposition);
 
     //Je compare le tableau avec celui du code
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
@@ -93,9 +94,18 @@ validation.addEventListener("click", () => {
     }
     else{
         alert("C'est perdu")
+        //Je change les src des grid-guesses
+        let c = 0;
+        const gridGuess = document.getElementById("grid-guesses_left");
+        console.log(gridGuess);
+        for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
+            gridGuess.children[j].src = `./Images/${codeProposition[c]}.png`;
+            c++;
+        }
+        currentGridGuessBall += 4
+
     }
 
     })
 
 
-//Je change les src des grid-guesses
