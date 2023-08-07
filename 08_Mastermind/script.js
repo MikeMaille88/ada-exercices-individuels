@@ -1,14 +1,18 @@
 let activeBall = null; // Variable pour stocker la bille active
 const colors = ["Bleu", "Jaune", "Rouge", "Vert", "Violet", "Turquoise", "Noir", "Gris"]
 let code = []
+let nbCouleursBienPlacees = 0;
+let nbCouleursMalPlacees = 0;
 //let code = ["Turquoise", "Jaune", "Rouge", "Violet"]
 
 //Choix aléatoire du code parmi les 8 couleurs disponibles
 function randomCode() {
-    for (i=0; i<4; i++){
+    while (code.length != 4){
         let color = colors[Math.floor(Math.random()*colors.length)];
-        code.push(color);
-        //console.log(code)
+        if (!code.includes(color)){
+            code.push(color);
+            //console.log(code)
+        }
     }
     //Afficher les couleurs du code sur la page
     let gridCode = document.getElementById("grid-code");
@@ -89,6 +93,19 @@ validation.addEventListener("click", () => {
     //console.log("codeProposition", codeProposition);
 
     //Je compare le tableau avec celui du code
+    for (let i=0; i<codeProposition.length; i++) {
+            if (code[i] === codeProposition[i]) {
+                nbCouleursBienPlacees += 1;
+            }
+            if (code.includes(codeProposition[i]) && (code[i] !== codeProposition[i])) {
+                nbCouleursMalPlacees += 1;
+            }
+        }
+    console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
+    console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
+    nbCouleursBienPlacees = 0
+    nbCouleursMalPlacees = 0
+
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
         alert("C'est gagné")
     }
@@ -115,7 +132,4 @@ validation.addEventListener("click", () => {
             currentGridGuessBall += 4
         }
     }
-
     })
-
-
