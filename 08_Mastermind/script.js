@@ -97,7 +97,7 @@ validation.addEventListener("click", () => {
         let c = 0;
         if (currentGridGuessBall < 24){
             let gridGuess = document.getElementById("grid-guesses_left");
-            console.log(gridGuess,"left");
+            //console.log(gridGuess,"left");
             for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
                 gridGuess.children[j].src = `./Images/${codeProposition[c]}.png`;
                 c++;
@@ -107,9 +107,8 @@ validation.addEventListener("click", () => {
             alert("C'est perdu")
         }else{
             gridGuess = document.getElementById("grid-guesses_right");
-            console.log(gridGuess,"right");
+            //console.log(gridGuess,"right");
             for (j=currentGridGuessBall-1; j<(currentGridGuessBall+3); j++){
-                console.log(j-currentGridGuessBall+1)
                 gridGuess.children[j-24].src = `./Images/${codeProposition[c]}.png`;
                 c++;
             }
