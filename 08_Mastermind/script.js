@@ -101,10 +101,31 @@ validation.addEventListener("click", () => {
                 nbCouleursMalPlacees += 1;
             }
         }
+
+    //Je change les src des grid-check    
+    let checkBallPos = 0;
+    let c = 0;
+    let checkBall = document.getElementById(`grid-check_left`);
+
     console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
+    while (nbCouleursBienPlacees > 0){
+        checkBallPos++
+        checkBall.children[c].src = "./Images/Vert.png";
+        c++
+        nbCouleursBienPlacees--
+    }
+
     console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
+    while (nbCouleursMalPlacees > 0){
+        checkBallPos++
+        checkBall.children[c].src = "./Images/Jaune.png";
+        c++
+        nbCouleursMalPlacees--
+    }
+    
     nbCouleursBienPlacees = 0
     nbCouleursMalPlacees = 0
+
 
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
         alert("C'est gagné")
