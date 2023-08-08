@@ -3,6 +3,7 @@ const colors = ["Bleu", "Jaune", "Rouge", "Vert", "Violet", "Turquoise", "Noir",
 let code = []
 let nbCouleursBienPlacees = 0;
 let nbCouleursMalPlacees = 0;
+let index = 0;
 //let code = ["Turquoise", "Jaune", "Rouge", "Violet"]
 
 //Choix aléatoire du code parmi les 8 couleurs disponibles
@@ -104,27 +105,32 @@ validation.addEventListener("click", () => {
 
     //Je change les src des grid-check    
     let checkBallPos = 0;
-    let c = 0;
+    let noColorGuessed = 4 - nbCouleursBienPlacees - nbCouleursMalPlacees
     let checkBall = document.getElementById(`grid-check_left`);
 
     console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
     while (nbCouleursBienPlacees > 0){
         checkBallPos++
-        checkBall.children[c].src = "./Images/Vert.png";
-        c++
+        checkBall.children[index].src = "./Images/Vert.png";
+        index++
         nbCouleursBienPlacees--
     }
 
     console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
     while (nbCouleursMalPlacees > 0){
         checkBallPos++
-        checkBall.children[c].src = "./Images/Jaune.png";
-        c++
+        checkBall.children[index].src = "./Images/Jaune.png";
+        index++
         nbCouleursMalPlacees--
     }
-    
-    nbCouleursBienPlacees = 0
-    nbCouleursMalPlacees = 0
+
+    console.log(noColorGuessed,"noColorGuessed")
+    while (noColorGuessed > 0){
+        checkBallPos++
+        //checkBall.children[index].src = "./Images/Rouge.png";
+        index++
+        noColorGuessed--
+    }
 
 
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
