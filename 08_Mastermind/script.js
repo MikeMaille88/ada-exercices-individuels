@@ -15,15 +15,17 @@ function randomCode() {
             //console.log(code)
         }
     }
-    /* //Afficher les couleurs du code sur la page
+}
+//Afficher les couleurs du code sur la page
+function displayCode() {
     let gridCode = document.getElementById("grid-code");
     //console.log(gridCode)
-        for (i=0; i<4; i++){
-            let colorToCast = code[i];
-            //console.log("colorToCast", colorToCast);
-            gridCode.children[i].src = `./Images/${colorToCast}.png`;
-            //console.log("newColorImg",gridCode.children[i].src);
-        } */
+    for (i=0; i<4; i++){
+        let colorToCast = code[i];
+        //console.log("colorToCast", colorToCast);
+        gridCode.children[i].src = `./Images/${colorToCast}.png`;
+        //console.log("newColorImg",gridCode.children[i].src);
+    }
 }
 
 randomCode()
@@ -166,7 +168,8 @@ validation.addEventListener("click", () => {
 
 
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
-        alert("C'est gagné")
+        displayCode()
+        alert("Mellon !")
     }
     else{
         //Je change les src des grid-guesses
@@ -180,7 +183,8 @@ validation.addEventListener("click", () => {
             }
             currentGridGuessBall += 4
         }else if (currentGridGuessBall > 44){
-            alert("C'est perdu")
+            displayCode()
+            alert("La voie est close !")
         }else{
             gridGuess = document.getElementById("grid-guesses_right");
             //console.log(gridGuess,"right");
@@ -191,4 +195,4 @@ validation.addEventListener("click", () => {
             currentGridGuessBall += 4
         }
     }
-    })
+})
