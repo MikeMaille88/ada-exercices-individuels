@@ -38,10 +38,14 @@ function toggleColorList(event) {
     const colorList = document.getElementById("colorList");
     colorList.style.display = colorList.style.display === "none" ? "block" : "none";
 
-    // Enregistrez la bille cliquée comme bille active
+    // Réinitialise la sélection de la liste à "Choisir une couleur"
+    const colorListElement = document.querySelector("[name=Liste]");
+    colorListElement.selectedIndex = 0;
+
+    // Enregistre la bille cliquée comme bille active
     activeBall = event.target;
 
-    // Positionnez la div colorList au-dessus de la bille cliquée
+    // Positionne la div colorList au-dessus de la bille cliquée
     if (activeBall !== null) {
         const ballRect = activeBall.getBoundingClientRect();
         const parentRect = activeBall.parentElement.getBoundingClientRect();
@@ -55,7 +59,7 @@ function toggleColorList(event) {
     }
 }
 
-// Ajoutez un gestionnaire d'événement de clic pour chaque bille blanche
+// Ajoute un gestionnaire d'événement de clic pour chaque bille blanche
 const whiteBalls = document.querySelectorAll("[id^=blanc]");
 whiteBalls.forEach((ball) => {
     ball.addEventListener("click", toggleColorList);
@@ -65,17 +69,17 @@ whiteBalls.forEach((ball) => {
 function showSelectedColor() {
     const selectedColor = document.querySelector("[name=Liste]").value;
 
-    // Mettez à jour uniquement la bille active avec la couleur sélectionnée
+    // Met à jour uniquement la bille active avec la couleur sélectionnée
     if (activeBall !== null) {
         activeBall.src = `./Images/${selectedColor}.png`;
     }
 
-    // Masquer la liste une fois la couleur sélectionnée
+    // Masque la liste une fois la couleur sélectionnée
     const colorList = document.getElementById("colorList");
     colorList.style.display = "none";
 }
 
-// Ajoutez un gestionnaire d'événement de changement pour la liste de sélection
+// Ajoute un gestionnaire d'événement de changement pour la liste de sélection
 const colorList = document.querySelector("[name=Liste]");
 colorList.addEventListener("change", showSelectedColor);
 
