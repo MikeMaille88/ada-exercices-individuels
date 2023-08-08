@@ -169,7 +169,10 @@ validation.addEventListener("click", () => {
 
     if (JSON.stringify(codeProposition) == JSON.stringify(code)) {
         displayCode()
-        alert("Mellon !")
+        setTimeout(alert("Mellon !"), 1000)
+        if (confirm("Voulez-vous rejouer ?")){
+            location.reload()
+        }
     }
     else{
         //Je change les src des grid-guesses
@@ -184,7 +187,10 @@ validation.addEventListener("click", () => {
             currentGridGuessBall += 4
         }else if (currentGridGuessBall > 44){
             displayCode()
-            alert("La voie est close !")
+            setTimeout(alert("La voie est close !"), 1000)
+            if (confirm("Voulez-vous rejouer ?")){
+                location.reload()
+            }
         }else{
             gridGuess = document.getElementById("grid-guesses_right");
             //console.log(gridGuess,"right");

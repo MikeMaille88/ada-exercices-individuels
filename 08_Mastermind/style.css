@@ -7,8 +7,11 @@
 }
 
 .Home{
+    background-color: black;
     background-image: url(./Images/Moria.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .header{
@@ -73,7 +76,7 @@ p{
 }
 
 .grid-guesses{
-    margin-top: 60px;
+    margin-top: 20px;
     justify-content: center;
     display: flex;
     flex-direction: row;
