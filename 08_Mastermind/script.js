@@ -15,7 +15,7 @@ function randomCode() {
             //console.log(code)
         }
     }
-    //Afficher les couleurs du code sur la page
+    /* //Afficher les couleurs du code sur la page
     let gridCode = document.getElementById("grid-code");
     //console.log(gridCode)
         for (i=0; i<4; i++){
@@ -23,7 +23,7 @@ function randomCode() {
             //console.log("colorToCast", colorToCast);
             gridCode.children[i].src = `./Images/${colorToCast}.png`;
             //console.log("newColorImg",gridCode.children[i].src);
-        }
+        } */
 }
 
 randomCode()
@@ -105,31 +105,63 @@ validation.addEventListener("click", () => {
 
     //Je change les src des grid-check    
     let checkBallPos = 0;
+    let checkBallPosRight = 0;
     let noColorGuessed = 4 - nbCouleursBienPlacees - nbCouleursMalPlacees
-    let checkBall = document.getElementById(`grid-check_left`);
+    
+    if (index < 24){
+        let checkBall = document.getElementById(`grid-check_left`);
+        console.log (checkBall,"left")
+        //console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
+        while (nbCouleursBienPlacees > 0){
+            checkBallPos++
+            checkBall.children[index].src = "./Images/Vert.png";
+            index++
+            nbCouleursBienPlacees--
+        }
 
-    console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
-    while (nbCouleursBienPlacees > 0){
-        checkBallPos++
-        checkBall.children[index].src = "./Images/Vert.png";
-        index++
-        nbCouleursBienPlacees--
-    }
+        //console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
+        while (nbCouleursMalPlacees > 0){
+            checkBallPos++
+            checkBall.children[index].src = "./Images/Jaune.png";
+            index++
+            nbCouleursMalPlacees--
+        }
 
-    console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
-    while (nbCouleursMalPlacees > 0){
-        checkBallPos++
-        checkBall.children[index].src = "./Images/Jaune.png";
-        index++
-        nbCouleursMalPlacees--
-    }
+        //console.log(noColorGuessed,"noColorGuessed")
+        while (noColorGuessed > 0){
+            checkBallPos++
+            //checkBall.children[index].src = "./Images/Rouge.png";
+            index++
+            noColorGuessed--
+        }
+        console.log(index,"checkBallPos")
+    }else{
+        let checkBallright = document.getElementById(`grid-check_right`);
+        console.log (checkBallright,"right")
+        //console.log(nbCouleursBienPlacees,"nbCouleursBienPlacees")
+        while (nbCouleursBienPlacees > 0){
+            checkBallPosRight++
+            checkBallright.children[index-24].src = "./Images/Vert.png";
+            index++
+            nbCouleursBienPlacees--
+        }
 
-    console.log(noColorGuessed,"noColorGuessed")
-    while (noColorGuessed > 0){
-        checkBallPos++
-        //checkBall.children[index].src = "./Images/Rouge.png";
-        index++
-        noColorGuessed--
+        //console.log(nbCouleursMalPlacees,"nbCouleursMalPlacees")
+        while (nbCouleursMalPlacees > 0){
+            checkBallPosRight++
+            checkBallright.children[index-24].src = "./Images/Jaune.png";
+            index++
+            nbCouleursMalPlacees--
+        }
+
+        //console.log(noColorGuessed,"noColorGuessed")
+        while (noColorGuessed > 0){
+            checkBallPosRight++
+            //checkBall.children[index].src = "./Images/Rouge.png";
+            index++
+            noColorGuessed--
+        }
+
     }
 
 
